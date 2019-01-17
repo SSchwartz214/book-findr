@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import Books from "./Books";
+import Header from "./components/Header";
+import Books from "./components/Books";
 import "./App.css";
 
 class App extends Component {
