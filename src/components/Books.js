@@ -14,13 +14,16 @@ class Books extends Component {
   searchBook = e => {
     e.preventDefault();
     axios
-      .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${
-          this.state.SearchField
-        }`
-      )
+      .get("https://www.googleapis.com/books/v1/volumes", {
+        params: {
+          q: this.state.searchField
+        }
+      })
       .then(res => {
         console.log(res.data);
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 
