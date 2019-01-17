@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchArea from "./SearchArea";
+import axios from "axios";
 
 class Books extends Component {
   constructor(props) {
@@ -10,6 +11,19 @@ class Books extends Component {
     };
   }
 
+  searchBook = e => {
+    e.preventDefault();
+    axios
+      .get(
+        `https://www.googleapis.com/books/v1/volumes?q=${
+          this.state.SearchField
+        }`
+      )
+      .then(res => {
+        console.log(res.data);
+      });
+  };
+
   handleSearch = e => {
     this.setState({ searchField: e.target.value });
   };
@@ -17,7 +31,10 @@ class Books extends Component {
   render() {
     return (
       <div>
-        <SearchArea handleSearch={this.handleSearch} />
+        <SearchArea
+          searchBook={this.searchBook}
+          handleSearch={this.handleSearch}
+        />
       </div>
     );
   }
