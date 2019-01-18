@@ -15,8 +15,7 @@ const BookCard = props => {
       <div className="desc">
         <h2>{props.title}</h2>
         <div className="authors-container">
-          <h3>Author(s):</h3>
-          {cleanAuthors}
+          <h3>Author(s): {cleanAuthors}</h3>
         </div>
         <p>Publisher: {props.publisher}</p>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
