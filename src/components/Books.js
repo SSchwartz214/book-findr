@@ -20,7 +20,7 @@ class Books extends Component {
         }
       })
       .then(res => {
-        console.log(res.data);
+        this.setState({ books: [...res.data.body.items] });
       })
       .catch(error => {
         console.log(error);
@@ -38,6 +38,7 @@ class Books extends Component {
           searchBook={this.searchBook}
           handleSearch={this.handleSearch}
         />
+        <BookList books={this.state.books} />
       </div>
     );
   }
