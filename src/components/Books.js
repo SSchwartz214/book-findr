@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchArea from "./SearchArea";
 import axios from "axios";
+import BookList from "./BookList";
 
 class Books extends Component {
   constructor(props) {
@@ -20,7 +21,8 @@ class Books extends Component {
         }
       })
       .then(res => {
-        this.setState({ books: [...res.data.body.items] });
+        console.log(res);
+        this.setState({ books: res.data.items });
       })
       .catch(error => {
         console.log(error);
