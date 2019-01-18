@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchArea from "./SearchArea";
 import axios from "axios";
+import BookList from "./BookList";
 
 class Books extends Component {
   constructor(props) {
@@ -20,7 +21,9 @@ class Books extends Component {
         }
       })
       .then(res => {
-        console.log(res.data);
+        console.log(res);
+        const cleanData = this.cleanData(res);
+        this.setState({ books: cleanData });
       })
       .catch(error => {
         console.log(error);
@@ -31,6 +34,18 @@ class Books extends Component {
     this.setState({ searchField: e.target.value });
   };
 
+  cleanData = res => {
+    const cleanedData = res.data.items.map(book => {
+      if (book.volumeInfo.hasOwnProperty("imageLinks") === false) {
+        book.volumeInfo["imageLinks"] = {
+          thumbnail: "https://screenshotlayer.com/images/assets/placeholder.png"
+        };
+      }
+      return book;
+    });
+    return cleanedData;
+  };
+
   render() {
     return (
       <div>
@@ -38,6 +53,7 @@ class Books extends Component {
           searchBook={this.searchBook}
           handleSearch={this.handleSearch}
         />
+        <BookList books={this.state.books} />
       </div>
     );
   }
