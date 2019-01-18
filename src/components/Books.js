@@ -38,8 +38,7 @@ class Books extends Component {
     const cleanedData = res.data.items.map(book => {
       if (book.volumeInfo.hasOwnProperty("imageLinks") === false) {
         book.volumeInfo["imageLinks"] = {
-          thumbnail:
-            "https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available.jpg"
+          thumbnail: "https://screenshotlayer.com/images/assets/placeholder.png"
         };
       }
       return book;
