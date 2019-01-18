@@ -14,9 +14,7 @@ const BookCard = props => {
       <img src={props.image} alt="" />
       <div className="desc">
         <h2>{props.title}</h2>
-        <div className="authors-container">
-          <h3>Author(s): {cleanAuthors}</h3>
-        </div>
+        <h3>Author(s): {cleanAuthors}</h3>
         <p>Publisher: {props.publisher}</p>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
           Read More
