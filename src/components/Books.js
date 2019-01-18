@@ -22,7 +22,8 @@ class Books extends Component {
       })
       .then(res => {
         console.log(res);
-        this.setState({ books: res.data.items });
+        const cleanData = this.cleanData(res);
+        this.setState({ books: cleanData });
       })
       .catch(error => {
         console.log(error);
@@ -31,6 +32,19 @@ class Books extends Component {
 
   handleSearch = e => {
     this.setState({ searchField: e.target.value });
+  };
+
+  cleanData = res => {
+    const cleanedData = res.data.items.map(book => {
+      if (book.volumeInfo.hasOwnProperty("imageLinks") === false) {
+        book.volumeInfo["imageLinks"] = {
+          thumbnail:
+            "https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available.jpg"
+        };
+      }
+      return book;
+    });
+    return cleanedData;
   };
 
   render() {
