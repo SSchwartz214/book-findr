@@ -7,6 +7,7 @@ header {
   background: #52658f;
   color: #f5f5f5;
   text-align: center;
+  border-bottom: 5px solid #333a56;
 }
 
 header h1 {
@@ -24,20 +25,21 @@ input[type="text"] {
   border: none;
   border-bottom: 2px solid #333a56;
   width: 25%;
+  margin-right: 10px;
   font-size: 26px;
+  font-weight: bold;
   background: #f7f5e6;
   color: #333a56;
 }
 
-textarea:focus,
-input:focus {
+input[type="text"]:focus {
   outline: none;
 }
 
 button[type="submit"] {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 8px;
+  font-size: 10px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
