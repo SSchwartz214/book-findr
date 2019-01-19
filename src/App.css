@@ -13,7 +13,10 @@ header {
 header h1 {
   display: inline;
   margin-left: 15px;
-  font-weight: 300;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 3em;
+  color: #e8e8e8;
 }
 
 .search-area {
@@ -29,11 +32,19 @@ input[type="text"] {
   font-size: 26px;
   font-weight: bold;
   background: #f7f5e6;
-  color: #333a56;
+  color: #52658f;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
 }
 
 input[type="text"]:focus {
   outline: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #52658f;
+  opacity: 0.7; /* Firefox */
 }
 
 button[type="submit"] {
@@ -77,10 +88,20 @@ button[type="submit"]:active {
   background: linear-gradient(#fff, #e8e8e8);
   text-align: center;
   margin: 5px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .card-container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container h2 {
+  text-decoration: underline;
+}
+
+.card-container h3,
+p {
+  color: #52658f;
 }
 
 a:link,
