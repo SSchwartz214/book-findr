@@ -4,13 +4,10 @@ import axios from "axios";
 import BookList from "./BookList";
 
 class Books extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [],
-      searchField: ""
-    };
-  }
+  state = {
+    books: [],
+    searchField: ""
+  };
 
   searchBook = e => {
     e.preventDefault();
