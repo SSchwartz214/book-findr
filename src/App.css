@@ -1,12 +1,11 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
+body {
+  background: lightgrey;
 }
 
 header {
   padding: 30px 0 30px 0;
-  background: #ffff;
-  color: #a9a9a9;
+  background: #687a8f;
+  color: #f5f5f5;
   text-align: center;
 }
 
@@ -14,4 +13,81 @@ header h1 {
   display: inline;
   margin-left: 15px;
   font-weight: 300;
+}
+
+.search-area {
+  text-align: center;
+  margin: 15px;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #f7882f;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #f7882f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(199, 92, 5);
+}
+
+button[type="submit"]:active {
+  background-color: rgb(199, 92, 5);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 1rem;
+  justify-content: space-around;
+}
+
+.card-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transition: 0.3s;
+  padding: 10px 16px;
+  background: #fff;
+  text-align: center;
+  margin: 5px;
+}
+
+.card-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+a:link,
+a:visited {
+  background-color: #f7882f;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+a:hover,
+a:active {
+  background-color: rgb(199, 92, 5);
 }
