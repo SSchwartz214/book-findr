@@ -30,6 +30,12 @@ describe("Books", () => {
     expect(axios.get).toHaveBeenCalled();
     expect(wrapper.state().books.length).toEqual(10);
   });
+  it("should update state with user input", () => {
+    const mockEvent = { target: { value: "Ruby" } };
+    wrapper.instance().handleSearch(mockEvent);
+
+    expect(wrapper.state().searchField).toEqual("Ruby");
+  });
 });
 
 {
