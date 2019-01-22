@@ -7,7 +7,8 @@ class Books extends Component {
   state = {
     books: [],
     searchField: "",
-    loading: false
+    loading: false,
+    error: null
   };
 
   searchBook = e => {
@@ -20,14 +21,18 @@ class Books extends Component {
         }
       })
       .then(res => {
-        const cleanData = this.cleanData(res);
-        this.setState({
-          books: cleanData,
-          loading: false
-        });
+        if (res.data.items) {
+          const cleanData = this.cleanData(res);
+          this.setState({
+            books: cleanData,
+            loading: false
+          });
+        } else {
+          this.setState({ error: "No results", loading: false });
+        }
       })
       .catch(error => {
-        return error;
+        console.log(error);
       });
   };
 
@@ -61,7 +66,10 @@ class Books extends Component {
           searchBook={this.searchBook}
           handleSearch={this.handleSearch}
         />
-        <BookList books={this.state.books} />
+        <div className="error-msg">
+          {this.state.error && <h4>{this.state.error}</h4>}
+        </div>
+        {!this.state.error && <BookList books={this.state.books} />}
       </div>
     );
   }
