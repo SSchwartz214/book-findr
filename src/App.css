@@ -7,9 +7,9 @@ body {
 }
 
 header {
-  padding: 30px 0 30px 0;
+  padding: 15px 0 15px 0;
   background: #52658f;
-  color: #f5f5f5;
+  color: #e8e8e8;
   text-align: center;
   border-bottom: 5px solid #333a56;
 }
@@ -25,7 +25,7 @@ header h1 {
 
 .search-area {
   text-align: center;
-  margin: 15px;
+  margin: 30px;
 }
 
 input[type="text"] {
@@ -52,28 +52,22 @@ input[type="text"]:focus {
 }
 
 button[type="submit"] {
+  color: #e8e8e8 !important;
+  font-size: 16px;
+  background: #52658f;
+  padding: 20px;
+  border-radius: 8px;
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 10px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #333a56;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 button[type="submit"]:hover {
-  background-color: #151929;
-}
-
-button[type="submit"]:active {
-  background-color: #151929;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 .list {
@@ -112,6 +106,7 @@ p {
 a:link,
 a:visited {
   color: #52658f;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
   font-weight: bold;
