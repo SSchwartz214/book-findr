@@ -28,7 +28,7 @@ class Books extends Component {
             loading: false
           });
         } else {
-          this.setState({ error: "No books with that word", loading: false });
+          this.setState({ error: "No results", loading: false });
         }
       })
       .catch(error => {
@@ -66,7 +66,9 @@ class Books extends Component {
           searchBook={this.searchBook}
           handleSearch={this.handleSearch}
         />
-        {this.state.error && <p>{this.state.error}</p>}
+        <div className="error-msg">
+          {this.state.error && <h4>{this.state.error}</h4>}
+        </div>
         {!this.state.error && <BookList books={this.state.books} />}
       </div>
     );
