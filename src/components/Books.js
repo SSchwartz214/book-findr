@@ -4,15 +4,14 @@ import axios from "axios";
 import BookList from "./BookList";
 
 class Books extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [],
-      searchField: ""
-    };
-  }
+  state = {
+    books: [],
+    searchField: "",
+    loading: false
+  };
 
   searchBook = e => {
+    this.setState({ loading: true });
     e.preventDefault();
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {
@@ -21,12 +20,14 @@ class Books extends Component {
         }
       })
       .then(res => {
-        console.log(res);
         const cleanData = this.cleanData(res);
-        this.setState({ books: cleanData });
+        this.setState({
+          books: cleanData,
+          loading: false
+        });
       })
       .catch(error => {
-        console.log(error);
+        return error;
       });
   };
 
@@ -47,6 +48,13 @@ class Books extends Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return (
+        <div className="loading-image">
+          <i className="fa fa-spinner fa-spin fa-4x" />
+        </div>
+      );
+    }
     return (
       <div>
         <SearchArea
