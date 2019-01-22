@@ -16,7 +16,10 @@ const BookCard = props => {
   }
 
   return (
-    <div className="card-container">
+    <div
+      className="card-container"
+      onClick={() => window.open(props.link, "_blank")}
+    >
       <img src={props.image} alt="" />
       <div className="desc">
         <h2>{props.title}</h2>
