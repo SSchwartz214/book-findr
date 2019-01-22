@@ -1,13 +1,19 @@
 import React from "react";
 
 const BookCard = props => {
-  const cleanAuthors = props.authors.map((author, i, array) => {
-    return i === array.length - 1 ? (
-      <span key={`authors-${i}`}>{author}</span>
-    ) : (
-      <span key={`authors-${i}`}>{author}, </span>
-    );
-  });
+  let cleanAuthors;
+
+  if (props.authors) {
+    cleanAuthors = props.authors.map((author, i, array) => {
+      return i === array.length - 1 ? (
+        <span key={`authors-${i}`}>{author}</span>
+      ) : (
+        <span key={`authors-${i}`}>{author}, </span>
+      );
+    });
+  } else {
+    cleanAuthors = "Author not available";
+  }
 
   return (
     <div className="card-container">

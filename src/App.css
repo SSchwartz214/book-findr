@@ -131,3 +131,10 @@ a:active {
   margin: 50px auto;
   color: #52658f;
 }
+
+.error-msg {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #d8000c;
+}
