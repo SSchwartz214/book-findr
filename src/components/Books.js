@@ -6,10 +6,12 @@ import BookList from "./BookList";
 class Books extends Component {
   state = {
     books: [],
-    searchField: ""
+    searchField: "",
+    loading: false
   };
 
   searchBook = e => {
+    this.setState({ loading: true });
     e.preventDefault();
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {
@@ -19,7 +21,10 @@ class Books extends Component {
       })
       .then(res => {
         const cleanData = this.cleanData(res);
-        this.setState({ books: cleanData });
+        this.setState({
+          books: cleanData,
+          loading: false
+        });
       })
       .catch(error => {
         return error;
@@ -43,6 +48,13 @@ class Books extends Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return (
+        <div className="loading-image">
+          <i className="fa fa-spinner fa-spin fa-4x" />
+        </div>
+      );
+    }
     return (
       <div>
         <SearchArea
