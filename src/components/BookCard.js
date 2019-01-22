@@ -26,7 +26,7 @@ const BookCard = props => {
         <h3>{cleanAuthors}</h3>
         <p>Publisher: {props.publisher}</p>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
-          Read More
+          READ MORE
         </a>
       </div>
     </div>

@@ -85,7 +85,7 @@ button[type="submit"]:active {
 
 .card-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  border-radius: 10px;
   transition: 0.3s;
   padding: 10px 16px;
   color: #333a56;
@@ -111,18 +111,11 @@ p {
 
 a:link,
 a:visited {
-  background-color: #333a56;
-  color: white;
-  padding: 14px 25px;
+  color: #52658f;
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
   display: inline-block;
-  border-radius: 15px;
-}
-
-a:hover,
-a:active {
-  background-color: #151929;
 }
 
 .loading-image {
