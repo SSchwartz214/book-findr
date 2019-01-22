@@ -20,7 +20,7 @@ const BookCard = props => {
       <img src={props.image} alt="" />
       <div className="desc">
         <h2>{props.title}</h2>
-        <h3>By: {cleanAuthors}</h3>
+        <h3>{cleanAuthors}</h3>
         <p>Publisher: {props.publisher}</p>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
           Read More

@@ -25,14 +25,15 @@ class Books extends Component {
           const cleanData = this.cleanData(res);
           this.setState({
             books: cleanData,
-            loading: false
+            loading: false,
+            error: null
           });
         } else {
           this.setState({ error: "No results", loading: false });
         }
       })
       .catch(error => {
-        console.log(error);
+        this.setState({ error: "Please enter a valid term", loading: false });
       });
   };
 
