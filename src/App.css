@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  padding: 15px 0 15px 0;
+  padding: 10px 0;
   background: #52658f;
   color: #e8e8e8;
   text-align: center;
@@ -29,7 +29,7 @@ header h1 {
 }
 
 .search-container {
-  padding-top: 125px;
+  padding-top: 100px;
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -38,6 +38,19 @@ header h1 {
   text-align: center;
   margin: 0;
   margin-bottom: 25px;
+}
+
+.search-area h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #333a56;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.search-area .brand {
+  font-family: "Amatic SC", cursive;
+  font-size: 22px;
+  color: #333a56;
 }
 
 input[type="text"] {
@@ -120,7 +133,7 @@ button[type="submit"]:hover {
 }
 
 .card-container a {
-  color: #52658f;
+  color: #333a56;
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
@@ -133,7 +146,7 @@ button[type="submit"]:hover {
 }
 
 .card-container a:visited {
-  color: #52658f;
+  color: #333a56;
 }
 
 .loading-image {

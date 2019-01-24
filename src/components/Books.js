@@ -61,6 +61,7 @@ class Books extends Component {
         </div>
       );
     }
+
     return (
       <div className="search-container">
         <SearchArea
