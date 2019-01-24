@@ -7,7 +7,7 @@ const SearchArea = props => {
         <input
           onChange={props.handleSearch}
           type="text"
-          placeholder="Search books..."
+          placeholder="Enter title, author, or subject..."
         />
         <button type="submit">Search</button>
       </form>

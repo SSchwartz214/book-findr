@@ -57,12 +57,12 @@ class Books extends Component {
     if (this.state.loading) {
       return (
         <div className="loading-image">
-          <i className="fa fa-spinner fa-spin fa-4x" />
+          <i className="fa fa-spinner fa-spin fa-6x" />
         </div>
       );
     }
     return (
-      <div>
+      <div className="search-container">
         <SearchArea
           searchBook={this.searchBook}
           handleSearch={this.handleSearch}
