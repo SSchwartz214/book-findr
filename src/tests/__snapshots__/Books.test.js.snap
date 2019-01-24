@@ -22,10 +22,14 @@ ShallowWrapper {
           handleSearch={[Function]}
           searchBook={[Function]}
         />,
+        <div
+          className="error-msg"
+        />,
         <BookList
           books={Array []}
         />,
       ],
+      "className": "search-container",
     },
     "ref": null,
     "rendered": Array [
@@ -40,6 +44,18 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": null,
+          "className": "error-msg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -66,10 +82,14 @@ ShallowWrapper {
             handleSearch={[Function]}
             searchBook={[Function]}
           />,
+          <div
+            className="error-msg"
+          />,
           <BookList
             books={Array []}
           />,
         ],
+        "className": "search-container",
       },
       "ref": null,
       "rendered": Array [
@@ -84,6 +104,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": null,
+            "className": "error-msg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
         },
         Object {
           "instance": null,
