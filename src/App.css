@@ -12,6 +12,11 @@ header {
   color: #e8e8e8;
   text-align: center;
   border-bottom: 5px solid #333a56;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
 }
 
 header h1 {
@@ -23,9 +28,16 @@ header h1 {
   color: #e8e8e8;
 }
 
+.search-container {
+  padding-top: 125px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 .search-area {
   text-align: center;
-  margin: 30px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 input[type="text"] {
@@ -46,11 +58,10 @@ input[type="text"]:focus {
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #52658f;
   font-size: 20px;
   font-weight: 300;
-  opacity: 0.7; /* Firefox */
+  opacity: 0.7;
 }
 
 button[type="submit"] {
@@ -90,6 +101,8 @@ button[type="submit"]:hover {
   text-align: center;
   margin: 5px;
   font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  padding: 20px 15px 25px 15px;
 }
 
 .card-container:hover {
@@ -102,25 +115,31 @@ button[type="submit"]:hover {
 }
 
 .card-container h3,
-p {
+.card-container p {
   color: #52658f;
 }
 
-a:link,
-a:visited {
+.card-container a {
   color: #52658f;
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
   font-weight: bold;
   display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+.card-container a:visited {
+  color: #52658f;
 }
 
 .loading-image {
-  position: relative;
   width: 20px;
   height: 20px;
-  margin: 50px auto;
+  margin: 200px auto;
   color: #52658f;
 }
 
