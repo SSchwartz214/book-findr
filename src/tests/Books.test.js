@@ -11,9 +11,11 @@ describe("Books", () => {
   beforeEach(() => {
     wrapper = shallow(<Books />);
   });
+
   it("should match snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
   it("should return book JSON", async () => {
     const mockEvent = { preventDefault: jest.fn() };
     const url = "https://www.googleapis.com/books/v1/volumes";
@@ -30,6 +32,7 @@ describe("Books", () => {
     expect(axios.get).toHaveBeenCalled();
     expect(wrapper.state().books.length).toEqual(10);
   });
+  
   it("should update state with user input", () => {
     const mockEvent = { target: { value: "Ruby" } };
     wrapper.instance().handleSearch(mockEvent);
