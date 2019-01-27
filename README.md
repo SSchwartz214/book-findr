@@ -1,4 +1,4 @@
-## BOOKFINDR
+## Book Findr
 
 ## Description
 This application allows a user to search for books by title, author or subject by using Google Books API.  After the user enters a search term, all books matching that term will be displayed along with relevant information.
@@ -7,21 +7,17 @@ This application allows a user to search for books by title, author or subject b
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-- ReactJS
-- Jest
-- Enzyme
-
 <b>Built with</b>
 - [ReactJS](https://reactjs.org/)
 
 ## Installation
-Clone this [repo] (https://github.com/SSchwartz214/book-findr.git)
+Clone this [repo](https://github.com/SSchwartz214/book-findr.git)
 ### `npm install`
 ### `npm start`
 
 ## API Reference
 
-[Google Books API] (https://developers.google.com/books/)
+[Google Books API](https://developers.google.com/books/)
 
 ## Tests
 ### npm test
