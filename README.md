@@ -23,7 +23,7 @@ Include logo/demo screenshot etc.
 3. Install dependencies
 
   ```shell
-  npm install
+  $ npm install
   ```
 
 ## Running the Server Locally
@@ -31,12 +31,12 @@ Include logo/demo screenshot etc.
 To see the code in action locally, you need to fire up a development server. Use the command:
 
 ```shell
-npm start
+$ npm start
 ```
 
 Once the server is running, visit in your browser:
 
-* (http://localhost:3000/) to run the application.
+* http://localhost:3000/ to run the application.
 
 
 ## API Reference
@@ -44,7 +44,10 @@ Once the server is running, visit in your browser:
 [Google Books API](https://developers.google.com/books/)
 
 ## Tests
-### npm test
+
+```shell
+$ npm test
+```
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
