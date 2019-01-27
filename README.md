@@ -1,6 +1,6 @@
 ## Book Findr
 
-https://bookfindr.herokuapp.com/
+[Live Demo](https://bookfindr.herokuapp.com/)
 
 ## Description
 
@@ -20,7 +20,7 @@ This application allows a user to search for books by title, author or subject b
 1. Clone this repository 
 
   ```shell
- $ git clone (https://github.com/SSchwartz214/book-findr.git)
+ $ git clone `https://github.com/SSchwartz214/book-findr.git`
   ```
   
 2. Change into the `book-findr` directory
