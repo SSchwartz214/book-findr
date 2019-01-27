@@ -10,10 +10,34 @@ Include logo/demo screenshot etc.
 <b>Built with</b>
 - [ReactJS](https://reactjs.org/)
 
-## Installation
-Clone this [repo](https://github.com/SSchwartz214/book-findr.git)
-### `npm install`
-### `npm start`
+## Initial Setup
+
+1. Clone this repository 
+
+  ```shell
+ $ git clone (https://github.com/SSchwartz214/book-findr.git)
+  ```
+  
+2. Change into the `book-findr` directory
+
+3. Install dependencies
+
+  ```shell
+  npm install
+  ```
+
+## Running the Server Locally
+
+To see the code in action locally, you need to fire up a development server. Use the command:
+
+```shell
+npm start
+```
+
+Once the server is running, visit in your browser:
+
+* (http://localhost:3000/) to run the application.
+
 
 ## API Reference
 
