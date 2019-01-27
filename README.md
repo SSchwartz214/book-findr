@@ -12,8 +12,8 @@ Include logo/demo screenshot etc.
 
 ## Installation
 Clone this [repo](https://github.com/SSchwartz214/book-findr.git)
-$ `npm install`
-$ `npm start`
+### `npm install`
+### `npm start`
 
 ## API Reference
 
