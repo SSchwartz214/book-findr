@@ -15,6 +15,11 @@ const BookCard = props => {
     cleanAuthors = "Author not available";
   }
 
+  const renderHTML = (rawHTML: string) =>
+    React.createElement("div", {
+      dangerouslySetInnerHTML: { __html: rawHTML }
+    });
+
   return (
     <div
       className="card-container"
@@ -24,7 +29,7 @@ const BookCard = props => {
       <div className="desc">
         <h2>{props.title}</h2>
         <h3>{cleanAuthors}</h3>
-        <p>Publisher: {props.publisher}</p>
+        <p>Publisher: {renderHTML(props.publisher)}</p>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
           Read more
         </a>
