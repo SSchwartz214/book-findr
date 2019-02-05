@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchArea from "./SearchArea";
-import axios from "axios";
 import BookList from "./BookList";
+import { getBooks } from "../utils/apiCalls";
 
 class Books extends Component {
   state = {
@@ -14,27 +14,7 @@ class Books extends Component {
   searchBook = e => {
     this.setState({ loading: true });
     e.preventDefault();
-    axios
-      .get("https://www.googleapis.com/books/v1/volumes", {
-        params: {
-          q: this.state.searchField
-        }
-      })
-      .then(res => {
-        if (res.data.items) {
-          const cleanData = this.cleanData(res);
-          this.setState({
-            books: cleanData,
-            loading: false,
-            error: null
-          });
-        } else {
-          this.setState({ error: "No results", loading: false });
-        }
-      })
-      .catch(error => {
-        this.setState({ error: "Please enter a valid term", loading: false });
-      });
+    getBooks(this.state.searchField);
   };
 
   handleSearch = e => {
