@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchArea from "./SearchArea";
-import axios from "axios";
 import BookList from "./BookList";
+import getBooks from "../utils/apiCalls";
 
 class Books extends Component {
   state = {
@@ -11,46 +11,25 @@ class Books extends Component {
     error: null
   };
 
-  searchBook = e => {
+  searchBooks = async e => {
     this.setState({ loading: true });
     e.preventDefault();
-    axios
-      .get("https://www.googleapis.com/books/v1/volumes", {
-        params: {
-          q: this.state.searchField
-        }
-      })
-      .then(res => {
-        if (res.data.items) {
-          const cleanData = this.cleanData(res);
-          this.setState({
-            books: cleanData,
-            loading: false,
-            error: null
-          });
-        } else {
-          this.setState({ error: "No results", loading: false });
-        }
-      })
-      .catch(error => {
-        this.setState({ error: "Please enter a valid term", loading: false });
+    const result = await getBooks(this.state.searchField);
+    if (result.hasOwnProperty("error")) {
+      const { error, loading } = result;
+      this.setState({ error, loading });
+    } else {
+      this.setState({
+        error: null,
+        books: result,
+        loading: false,
+        searchField: ""
       });
+    }
   };
 
   handleSearch = e => {
     this.setState({ searchField: e.target.value });
-  };
-
-  cleanData = res => {
-    const cleanedData = res.data.items.map(book => {
-      if (book.volumeInfo.hasOwnProperty("imageLinks") === false) {
-        book.volumeInfo["imageLinks"] = {
-          thumbnail: "https://screenshotlayer.com/images/assets/placeholder.png"
-        };
-      }
-      return book;
-    });
-    return cleanedData;
   };
 
   render() {
@@ -65,7 +44,7 @@ class Books extends Component {
     return (
       <div className="search-container">
         <SearchArea
-          searchBook={this.searchBook}
+          searchBook={this.searchBooks}
           handleSearch={this.handleSearch}
         />
         <div className="error-msg">
