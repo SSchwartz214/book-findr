@@ -1,5 +1,5 @@
-const cleanData = res => {
-  const cleanedData = res.items.map(book => {
+const cleanBookData = res => {
+  const cleanedBookData = res.items.map(book => {
     if (book.volumeInfo.hasOwnProperty("imageLinks") === false) {
       book.volumeInfo["imageLinks"] = {
         thumbnail: "https://screenshotlayer.com/images/assets/placeholder.png"
@@ -7,7 +7,7 @@ const cleanData = res => {
     }
     return book;
   });
-  return cleanedData;
+  return cleanedBookData;
 };
 
-export default cleanData;
+export default cleanBookData;

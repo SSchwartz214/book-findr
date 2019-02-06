@@ -1,10 +1,10 @@
 import React from "react";
 
 const BookCard = props => {
-  let cleanAuthors;
+  let parseAuthors;
 
   if (props.authors) {
-    cleanAuthors = props.authors.map((author, i, array) => {
+    parseAuthors = props.authors.map((author, i, array) => {
       return i === array.length - 1 ? (
         <span key={`authors-${i}`}>{author}</span>
       ) : (
@@ -12,7 +12,7 @@ const BookCard = props => {
       );
     });
   } else {
-    cleanAuthors = "Author not available";
+    parseAuthors = "Author not available";
   }
 
   const renderHTML = rawHTML =>
@@ -28,7 +28,7 @@ const BookCard = props => {
       <img src={props.image} alt="" />
       <div className="desc">
         <h2>{props.title}</h2>
-        <h3>{cleanAuthors}</h3>
+        <h3>{parseAuthors}</h3>
         <div>Publisher: {renderHTML(props.publisher)}</div>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
           Read more

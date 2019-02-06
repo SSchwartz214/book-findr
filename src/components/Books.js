@@ -11,7 +11,7 @@ class Books extends Component {
     error: null
   };
 
-  searchBook = async e => {
+  searchBooks = async e => {
     this.setState({ loading: true });
     e.preventDefault();
     const result = await getBooks(this.state.searchField);
@@ -44,7 +44,7 @@ class Books extends Component {
     return (
       <div className="search-container">
         <SearchArea
-          searchBook={this.searchBook}
+          searchBook={this.searchBooks}
           handleSearch={this.handleSearch}
         />
         <div className="error-msg">
