@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchArea from "./SearchArea";
 import BookList from "./BookList";
-import { getBooks } from "../utils/apiCalls";
+import getBooks from "../utils/apiCalls";
 
 class Books extends Component {
   state = {
@@ -11,26 +11,25 @@ class Books extends Component {
     error: null
   };
 
-  searchBook = e => {
+  searchBook = async e => {
     this.setState({ loading: true });
     e.preventDefault();
-    getBooks(this.state.searchField);
+    const result = await getBooks(this.state.searchField);
+    if (result.hasOwnProperty("error")) {
+      const { error, loading } = result;
+      this.setState({ error, loading });
+    } else {
+      this.setState({
+        error: null,
+        books: result,
+        loading: false,
+        searchField: ""
+      });
+    }
   };
 
   handleSearch = e => {
     this.setState({ searchField: e.target.value });
-  };
-
-  cleanData = res => {
-    const cleanedData = res.data.items.map(book => {
-      if (book.volumeInfo.hasOwnProperty("imageLinks") === false) {
-        book.volumeInfo["imageLinks"] = {
-          thumbnail: "https://screenshotlayer.com/images/assets/placeholder.png"
-        };
-      }
-      return book;
-    });
-    return cleanedData;
   };
 
   render() {
