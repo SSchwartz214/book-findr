@@ -11,6 +11,7 @@ const getBooks = async searchField => {
     if (result.items) {
       return cleanBookData(result);
     } else {
+      console.log(result);
       return { error: "No results", loading: false };
     }
   }
