@@ -135,8 +135,11 @@ button[type="submit"]:hover {
   text-decoration: underline;
 }
 
-.card-container h3,
-.card-container p {
+.card-container h3 {
+  color: #52658f;
+}
+
+.authors {
   color: #52658f;
 }
 
