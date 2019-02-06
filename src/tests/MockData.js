@@ -854,3 +854,85 @@ export const mockBooks = {
     }
   ]
 };
+
+export const mockBooksTwo = [
+  {
+    kind: "books#volume",
+    id: "lPeKDQAAQBAJ",
+    etag: "kbw4eEZkgWs",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/lPeKDQAAQBAJ",
+    volumeInfo: {
+      title: "Ruby",
+      authors: ["Cynthia Bond"],
+      publisher: "Hogarth Press",
+      publishedDate: "2015",
+      description:
+        "Loving the beautiful but damaged Ruby all of his life, Ephram is torn between his sister and a chance for a life with Ruby when the latter returns to their small hometown and confronts the forces that traumatized her early years.",
+      industryIdentifiers: [
+        {
+          type: "ISBN_13",
+          identifier: "9780804188241"
+        },
+        {
+          type: "ISBN_10",
+          identifier: "0804188246"
+        }
+      ],
+      readingModes: {
+        text: false,
+        image: false
+      },
+      pageCount: 368,
+      printType: "BOOK",
+      categories: ["Fiction"],
+      averageRating: 3.5,
+      ratingsCount: 87,
+      maturityRating: "NOT_MATURE",
+      allowAnonLogging: false,
+      contentVersion: "0.1.0.0.preview.0",
+      panelizationSummary: {
+        containsEpubBubbles: false,
+        containsImageBubbles: false
+      },
+      imageLinks: {
+        smallThumbnail:
+          "http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail:
+          "http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      language: "en",
+      previewLink:
+        "http://books.google.com/books?id=lPeKDQAAQBAJ&printsec=frontcover&dq=%22ruby%22&hl=&cd=1&source=gbs_api",
+      infoLink:
+        "http://books.google.com/books?id=lPeKDQAAQBAJ&dq=%22ruby%22&hl=&source=gbs_api",
+      canonicalVolumeLink:
+        "https://books.google.com/books/about/Ruby.html?hl=&id=lPeKDQAAQBAJ"
+    },
+    saleInfo: {
+      country: "US",
+      saleability: "NOT_FOR_SALE",
+      isEbook: false
+    },
+    accessInfo: {
+      country: "US",
+      viewability: "PARTIAL",
+      embeddable: true,
+      publicDomain: false,
+      textToSpeechPermission: "ALLOWED_FOR_ACCESSIBILITY",
+      epub: {
+        isAvailable: false
+      },
+      pdf: {
+        isAvailable: false
+      },
+      webReaderLink:
+        "http://play.google.com/books/reader?id=lPeKDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      accessViewStatus: "SAMPLE",
+      quoteSharingAllowed: false
+    },
+    searchInfo: {
+      textSnippet:
+        "Loving the beautiful but damaged Ruby all of his life, Ephram is torn between his sister and a chance for a life with Ruby when the latter returns to their small hometown and confronts the forces that traumatized her early years."
+    }
+  }
+];

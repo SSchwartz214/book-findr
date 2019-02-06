@@ -1,9 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import * as axios from "axios";
 import Books from "../components/Books";
 import { mockBooks } from "./MockData";
-jest.mock("axios");
 
 describe("Books", () => {
   let wrapper;
@@ -16,21 +14,62 @@ describe("Books", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match snapshot when loading", () => {
+    wrapper.setState({ loading: true });
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match snapshot when there are no results", () => {
+    wrapper.setState({ error: "No results" });
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it("should return book JSON", async () => {
     const mockEvent = { preventDefault: jest.fn() };
-    const url = "https://www.googleapis.com/books/v1/volumes";
-    const optionsObj = { params: { q: "" } };
+    wrapper.setState({ searchField: "ruby" });
 
     expect(wrapper.state().books.length).toEqual(0);
 
-    axios.get.mockImplementation((url, optionsObj) => {
+    window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
-        data: mockBooks
+        json: () => Promise.resolve(mockBooks)
       });
     });
-    await wrapper.instance().searchBook(mockEvent);
-    expect(axios.get).toHaveBeenCalled();
+    await wrapper.instance().searchBooks(mockEvent);
+    expect(window.fetch).toHaveBeenCalled();
     expect(wrapper.state().books.length).toEqual(10);
+  });
+
+  it("should return an error if there is invalid input", async () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.setState({ searchField: "" });
+
+    expect(wrapper.state().books.length).toEqual(0);
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({ status: 400 });
+    });
+    await wrapper.instance().searchBooks(mockEvent);
+    expect(window.fetch).toHaveBeenCalled();
+    await expect(wrapper.state().error).toEqual("Please enter a valid term");
+  });
+
+  it("should return an error if there are no results", async () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.setState({ searchField: "2432fdf342r" });
+
+    expect(wrapper.state().books.length).toEqual(0);
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve({ kind: "books#volumes", totalItems: 0 })
+      });
+    });
+    await wrapper.instance().searchBooks(mockEvent);
+    expect(window.fetch).toHaveBeenCalled();
+    await expect(wrapper.state().error).toEqual("No results");
   });
 
   it("should update state with user input", () => {

@@ -1,13 +1,12 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Header from "../components/Header";
-jest.mock("axios");
 
 describe("Header", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Header />);
+    wrapper = mount(<Header />);
   });
 
   it("should match snapshot", () => {

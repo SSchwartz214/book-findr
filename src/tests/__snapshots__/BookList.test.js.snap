@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookList should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BookList
+    books={
+      Array [
+        Object {
+          "accessInfo": Object {
+            "accessViewStatus": "SAMPLE",
+            "country": "US",
+            "embeddable": true,
+            "epub": Object {
+              "isAvailable": false,
+            },
+            "pdf": Object {
+              "isAvailable": false,
+            },
+            "publicDomain": false,
+            "quoteSharingAllowed": false,
+            "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+            "viewability": "PARTIAL",
+            "webReaderLink": "http://play.google.com/books/reader?id=lPeKDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          },
+          "etag": "kbw4eEZkgWs",
+          "id": "lPeKDQAAQBAJ",
+          "kind": "books#volume",
+          "saleInfo": Object {
+            "country": "US",
+            "isEbook": false,
+            "saleability": "NOT_FOR_SALE",
+          },
+          "searchInfo": Object {
+            "textSnippet": "Loving the beautiful but damaged Ruby all of his life, Ephram is torn between his sister and a chance for a life with Ruby when the latter returns to their small hometown and confronts the forces that traumatized her early years.",
+          },
+          "selfLink": "https://www.googleapis.com/books/v1/volumes/lPeKDQAAQBAJ",
+          "volumeInfo": Object {
+            "allowAnonLogging": false,
+            "authors": Array [
+              "Cynthia Bond",
+            ],
+            "averageRating": 3.5,
+            "canonicalVolumeLink": "https://books.google.com/books/about/Ruby.html?hl=&id=lPeKDQAAQBAJ",
+            "categories": Array [
+              "Fiction",
+            ],
+            "contentVersion": "0.1.0.0.preview.0",
+            "description": "Loving the beautiful but damaged Ruby all of his life, Ephram is torn between his sister and a chance for a life with Ruby when the latter returns to their small hometown and confronts the forces that traumatized her early years.",
+            "imageLinks": Object {
+              "smallThumbnail": "http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            },
+            "industryIdentifiers": Array [
+              Object {
+                "identifier": "9780804188241",
+                "type": "ISBN_13",
+              },
+              Object {
+                "identifier": "0804188246",
+                "type": "ISBN_10",
+              },
+            ],
+            "infoLink": "http://books.google.com/books?id=lPeKDQAAQBAJ&dq=%22ruby%22&hl=&source=gbs_api",
+            "language": "en",
+            "maturityRating": "NOT_MATURE",
+            "pageCount": 368,
+            "panelizationSummary": Object {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false,
+            },
+            "previewLink": "http://books.google.com/books?id=lPeKDQAAQBAJ&printsec=frontcover&dq=%22ruby%22&hl=&cd=1&source=gbs_api",
+            "printType": "BOOK",
+            "publishedDate": "2015",
+            "publisher": "Hogarth Press",
+            "ratingsCount": 87,
+            "readingModes": Object {
+              "image": false,
+              "text": false,
+            },
+            "title": "Ruby",
+          },
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <BookCard
+          authors={
+            Array [
+              "Cynthia Bond",
+            ]
+          }
+          image="http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          link="http://books.google.com/books?id=lPeKDQAAQBAJ&dq=%22ruby%22&hl=&source=gbs_api"
+          publisher="Hogarth Press"
+          title="Ruby"
+        />,
+      ],
+      "className": "list",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "book-0",
+        "nodeType": "function",
+        "props": Object {
+          "authors": Array [
+            "Cynthia Bond",
+          ],
+          "image": "http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "link": "http://books.google.com/books?id=lPeKDQAAQBAJ&dq=%22ruby%22&hl=&source=gbs_api",
+          "publisher": "Hogarth Press",
+          "title": "Ruby",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <BookCard
+            authors={
+              Array [
+                "Cynthia Bond",
+              ]
+            }
+            image="http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            link="http://books.google.com/books?id=lPeKDQAAQBAJ&dq=%22ruby%22&hl=&source=gbs_api"
+            publisher="Hogarth Press"
+            title="Ruby"
+          />,
+        ],
+        "className": "list",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "book-0",
+          "nodeType": "function",
+          "props": Object {
+            "authors": Array [
+              "Cynthia Bond",
+            ],
+            "image": "http://books.google.com/books/content?id=lPeKDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "link": "http://books.google.com/books?id=lPeKDQAAQBAJ&dq=%22ruby%22&hl=&source=gbs_api",
+            "publisher": "Hogarth Press",
+            "title": "Ruby",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

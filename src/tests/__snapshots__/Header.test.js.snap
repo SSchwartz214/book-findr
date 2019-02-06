@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should match snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
+ReactWrapper {
   Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -12,51 +11,22 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
+  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
+    "nodeType": "function",
+    "props": Object {},
+    "ref": null,
+    "rendered": Object {
+      "instance": <header>
         <i
-          className="fas fa-book-reader fa-2x"
-        />,
+          class="fas fa-book-reader fa-2x"
+        />
         <h1>
           BookFindr
-        </h1>,
-      ],
-      "onClick": [Function],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "fas fa-book-reader fa-2x",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "i",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "BookFindr",
-        },
-        "ref": null,
-        "rendered": "BookFindr",
-        "type": "h1",
-      },
-    ],
-    "type": "header",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
+        </h1>
+      </header>,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
@@ -73,29 +43,105 @@ ShallowWrapper {
       "ref": null,
       "rendered": Array [
         Object {
-          "instance": null,
+          "instance": <i
+            class="fas fa-book-reader fa-2x"
+          />,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "className": "fas fa-book-reader fa-2x",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            undefined,
+          ],
           "type": "i",
         },
         Object {
-          "instance": null,
+          "instance": <h1>
+            BookFindr
+          </h1>,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "BookFindr",
           },
           "ref": null,
-          "rendered": "BookFindr",
+          "rendered": Array [
+            "BookFindr",
+          ],
           "type": "h1",
         },
       ],
       "type": "header",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {},
+      "ref": null,
+      "rendered": Object {
+        "instance": <header>
+          <i
+            class="fas fa-book-reader fa-2x"
+          />
+          <h1>
+            BookFindr
+          </h1>
+        </header>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              className="fas fa-book-reader fa-2x"
+            />,
+            <h1>
+              BookFindr
+            </h1>,
+          ],
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <i
+              class="fas fa-book-reader fa-2x"
+            />,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-book-reader fa-2x",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "i",
+          },
+          Object {
+            "instance": <h1>
+              BookFindr
+            </h1>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "BookFindr",
+            },
+            "ref": null,
+            "rendered": Array [
+              "BookFindr",
+            ],
+            "type": "h1",
+          },
+        ],
+        "type": "header",
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
